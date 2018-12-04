@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RequestMapping("${path.base}")
+@RequestMapping("/lifespan")
 @RestController
 public class BabyLifeEndpoints {
 
@@ -14,7 +14,7 @@ public class BabyLifeEndpoints {
     @Autowired
     IBabyService service;
 
-    @GetMapping("${path.predict}")
+    @GetMapping("predict")
     public String predictLifespan(){
         return service.predictLifeSpan();
     }
